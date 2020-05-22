@@ -15,7 +15,7 @@ while (suffix in cmd) {
     cmd = cmd.replace("$$pid$suffix", "")
 }
 
-if ("ttys000" !in cmd) {
+if ("ttys" !in cmd) {
     // 這兩個pid被殺掉之後會一直產生，導致無限loop，所以把他移除
     // drop /bin/sh -c ps -ax|grep gradle
     // drop grep gradle
